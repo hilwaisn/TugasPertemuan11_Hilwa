@@ -6,11 +6,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TugasPertemuan11_Hilwa.Model;
 
 namespace TugasPertemuan11_Hilwa.Controller
 {
     internal class PelatihanController : Model.Connection
     {
+        Connection conn = new Connection();
         public DataTable tampilPelatihan()
         {
             DataTable data = new DataTable();
@@ -26,13 +28,15 @@ namespace TugasPertemuan11_Hilwa.Controller
             }
             return data;
         }
-        public bool valNama(string name)
+        public bool valName(string name)
         {
             for (int a = 0; a < name.Length; a++)
             {
-                if ((name[a] >= '0' && name[a] <= '9') || name[0] == ' ' || name[name.Length - 1] == ' ' || name[a] == ':' || name[a] == ',' || name[0] == '-' || name[name.Length - 1] == '-' || name[a] == '/' || name[a] == '\\' || name[a] == '?')
+                if ((name[a] >= '0' && name[a] <= '9') || name[0] == ' ' || name[name.Length - 1] == ' ' || name[a] == ':' ||
+                name[a] == ',' | name[0] == '-' || name[name.Length - 1] == '-' || name[a] == '/' || name[a] == '\\' ||
+                name[a] == '?')
                 {
-                    MessageBox.Show("Input name field", "Add Pelatihan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Input Name field", "Add Pelatihan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return false;
                 }
             }
@@ -44,7 +48,7 @@ namespace TugasPertemuan11_Hilwa.Controller
             {
                 if ((name[a] >= '0' && name[a] <= '9') || name[0] == ' ' || name[name.Length - 1] == ' ' || name[a] == ':' || name[a] == ',' || name[0] == '-' || name[name.Length - 1] == '-' || name[a] == '/' || name[a] == '\\' || name[a] == '?')
                 {
-                    MessageBox.Show("Input NAme field", "Add Pelatihan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Input Name field", "Add Pelatihan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return false;
                 }
             }
@@ -71,13 +75,13 @@ namespace TugasPertemuan11_Hilwa.Controller
                 MessageBox.Show("Tambah Data Gagal" + ex.Message);
             }
         }
-        public void updatePelatihan(string idpelatihan, string namapelatihan, string deskripsipelatihan, DateTime tanggalmulai, DateTime tanggalselesai, string instrukturpelatihan, string lokasipelatihan, string hargapelatihan)
+        public void updatePelatihan(string id, string namapelatihan, string deskripsipelatihan, DateTime tanggalmulai, DateTime tanggalselesai, string instrukturpelatihan, string lokasipelatihan, string hargapelatihan)
         {
-            string update = "UPDATE Pelatihan SET " + "id=@id,nama_pelatihan=@nama_pelatihan,deskripsi=@deskripsi, tanggal_mulai=@tanggal_mulai, tanggal_selesai=@tanggal_selesai, instruktur=@instruktur, lokasi=@lokasi, harga=@harga" + "WHERE id=" + idpelatihan;
+            string update = "UPDATE Pelatihan SET " + "id=@id,nama_pelatihan=@nama_pelatihan,deskripsi=@deskripsi, tanggal_mulai=@tanggal_mulai, tanggal_selesai=@tanggal_selesai, instruktur=@instruktur, lokasi=@lokasi, harga=@harga" + "WHERE id=" + id;
             try
             {
                 cmd = new MySqlConnector.MySqlCommand(update, GetConn());
-                cmd.Parameters.Add("@id", MySqlConnector.MySqlDbType.VarChar).Value = idpelatihan;
+                cmd.Parameters.Add("@id", MySqlConnector.MySqlDbType.VarChar).Value = id;
                 cmd.Parameters.Add("@nama_pelatihan", MySqlConnector.MySqlDbType.VarChar).Value = namapelatihan;
                 cmd.Parameters.Add("@deskripsi", MySqlConnector.MySqlDbType.VarChar).Value = deskripsipelatihan;
                 cmd.Parameters.Add("@tanggal_mulai", MySqlConnector.MySqlDbType.DateTime).Value = tanggalmulai;
@@ -105,6 +109,23 @@ namespace TugasPertemuan11_Hilwa.Controller
             {
                 MessageBox.Show("Delete Data Gagal" + ex.Message);
             }
+        }
+        public DataTable searchPelatihan(string search)
+        {
+            DataTable table = new DataTable();
+            try
+            {
+                MySqlCommand command = new MySqlCommand(
+                    "SELECT * FROM Pelatihan WHERE CONCAT(id, nama_pelatihan,deskripsi," +
+                    "tanggal_mulai,tanggal_selesai,instruktur, lokasi, harga)LIKE '%" + search + "%'", conn.GetConn());
+                MySqlDataAdapter adapter = new MySqlDataAdapter(command);
+                adapter.Fill(table);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return table;
         }
     }
 }

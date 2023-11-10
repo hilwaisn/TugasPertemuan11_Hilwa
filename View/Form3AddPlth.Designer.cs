@@ -53,6 +53,7 @@
             // 
             // btnSave
             // 
+            this.btnSave.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnSave.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.SystemColors.Control;
@@ -66,6 +67,7 @@
             // 
             // btnCancel
             // 
+            this.btnCancel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnCancel.BackColor = System.Drawing.Color.Red;
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.SystemColors.Control;
@@ -79,6 +81,7 @@
             // 
             // txtID
             // 
+            this.txtID.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtID.Location = new System.Drawing.Point(474, 133);
             this.txtID.Multiline = true;
@@ -97,6 +100,7 @@
             // 
             // lblJudul
             // 
+            this.lblJudul.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblJudul.AutoSize = true;
             this.lblJudul.BackColor = System.Drawing.Color.Gray;
             this.lblJudul.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -109,6 +113,7 @@
             // 
             // lblId
             // 
+            this.lblId.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblId.AutoSize = true;
             this.lblId.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblId.Location = new System.Drawing.Point(135, 133);
@@ -119,6 +124,7 @@
             // 
             // lblNP
             // 
+            this.lblNP.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblNP.AutoSize = true;
             this.lblNP.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNP.Location = new System.Drawing.Point(135, 183);
@@ -129,6 +135,7 @@
             // 
             // lblDes
             // 
+            this.lblDes.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblDes.AutoSize = true;
             this.lblDes.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDes.Location = new System.Drawing.Point(135, 242);
@@ -139,6 +146,7 @@
             // 
             // lblTM
             // 
+            this.lblTM.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblTM.AutoSize = true;
             this.lblTM.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTM.Location = new System.Drawing.Point(135, 295);
@@ -149,6 +157,7 @@
             // 
             // lblTS
             // 
+            this.lblTS.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblTS.AutoSize = true;
             this.lblTS.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTS.Location = new System.Drawing.Point(135, 344);
@@ -159,6 +168,7 @@
             // 
             // lblIns
             // 
+            this.lblIns.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblIns.AutoSize = true;
             this.lblIns.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIns.Location = new System.Drawing.Point(135, 389);
@@ -169,6 +179,7 @@
             // 
             // lblLok
             // 
+            this.lblLok.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblLok.AutoSize = true;
             this.lblLok.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLok.Location = new System.Drawing.Point(135, 437);
@@ -179,6 +190,7 @@
             // 
             // lblHarga
             // 
+            this.lblHarga.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblHarga.AutoSize = true;
             this.lblHarga.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHarga.Location = new System.Drawing.Point(135, 487);
@@ -189,6 +201,7 @@
             // 
             // txtNP
             // 
+            this.txtNP.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtNP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNP.Location = new System.Drawing.Point(474, 183);
             this.txtNP.Multiline = true;
@@ -198,6 +211,7 @@
             // 
             // txtDes
             // 
+            this.txtDes.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtDes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDes.Location = new System.Drawing.Point(474, 242);
             this.txtDes.Multiline = true;
@@ -208,6 +222,7 @@
             // 
             // txtIns
             // 
+            this.txtIns.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtIns.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIns.Location = new System.Drawing.Point(474, 389);
             this.txtIns.Multiline = true;
@@ -218,6 +233,7 @@
             // 
             // txtLok
             // 
+            this.txtLok.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtLok.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLok.Location = new System.Drawing.Point(474, 437);
             this.txtLok.Multiline = true;
@@ -228,6 +244,7 @@
             // 
             // txtHarga
             // 
+            this.txtHarga.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtHarga.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtHarga.Location = new System.Drawing.Point(474, 487);
             this.txtHarga.Multiline = true;
@@ -238,6 +255,7 @@
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dateTimePicker1.CustomFormat = " ";
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker1.Location = new System.Drawing.Point(474, 295);
@@ -248,6 +266,7 @@
             // 
             // dateTimePicker2
             // 
+            this.dateTimePicker2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dateTimePicker2.CustomFormat = " ";
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker2.Location = new System.Drawing.Point(474, 344);

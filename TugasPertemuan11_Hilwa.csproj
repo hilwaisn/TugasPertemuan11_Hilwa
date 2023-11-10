@@ -71,6 +71,7 @@
   <ItemGroup>
     <Compile Include="Controller\PelatihanController.cs" />
     <Compile Include="Controller\PesertaController.cs" />
+    <Compile Include="Controller\Validasi.cs" />
     <Compile Include="View\Form4UpPlh.cs">
       <SubType>Form</SubType>
     </Compile>

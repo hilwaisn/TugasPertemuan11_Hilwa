@@ -16,6 +16,7 @@ namespace TugasPertemuan11_Hilwa
     public partial class Form3AddPlth : Form
     {
         private PelatihanController pltcontroller;
+        Validasi val = new Validasi();
         public Form3AddPlth()
         {
             InitializeComponent();
@@ -24,17 +25,46 @@ namespace TugasPertemuan11_Hilwa
         private void btnSave_Click(object sender, EventArgs e)
         {
             pltcontroller = new PelatihanController();
-            pltcontroller.tambahPelatihan(txtID.Text, txtNP.Text, txtDes.Text, dateTimePicker1.Value, dateTimePicker2.Value, txtIns.Text, txtLok.Text, txtHarga.Text);
-            this.Controls.Clear();
-            this.InitializeComponent();
-            txtNP.Focus();
-            MessageBox.Show("Data Disimpan");
-            Form3AddPlth lk = new Form3AddPlth();
+            if (val.valName(txtNP.Text))
+            {
+                try
+                {
+                    pltcontroller.tambahPelatihan(txtID.Text, txtNP.Text, txtDes.Text, dateTimePicker1.Value, dateTimePicker2.Value, txtIns.Text, txtLok.Text, txtHarga.Text);
+                    MessageBox.Show("New Pelatihan added", "add Pelatihan",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Show();
+                    txtNP.Focus();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Empty field", "Add Pelatihan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
 
-            lk.Show();
-            this.Hide();
+            if (val.valLokasi(txtLok.Text))
+            {
+                try
+                {
+                    pltcontroller.tambahPelatihan(txtID.Text, txtNP.Text, txtDes.Text, dateTimePicker1.Value, dateTimePicker2.Value, txtIns.Text, txtLok.Text, txtHarga.Text);
+                    MessageBox.Show("New Pelatihan added", "add Pelatihan",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Show();
+                    txtNP.Focus();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Empty field", "Add Teacher", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
-
         private void Form3AddPlth_Load(object sender, EventArgs e)
         {
             txtID.MaxLength = 3;
@@ -43,9 +73,7 @@ namespace TugasPertemuan11_Hilwa
             txtIns.MaxLength = 100;
             txtLok.MaxLength = 255;
             txtHarga.MaxLength = 10;
-        }
-
-        
+        } 
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {

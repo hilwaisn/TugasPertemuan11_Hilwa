@@ -38,6 +38,7 @@
             // 
             // btnPelatihan
             // 
+            this.btnPelatihan.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnPelatihan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnPelatihan.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPelatihan.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -51,6 +52,7 @@
             // 
             // btnSertifikat
             // 
+            this.btnSertifikat.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnSertifikat.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnSertifikat.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSertifikat.ForeColor = System.Drawing.SystemColors.Control;
@@ -63,6 +65,7 @@
             // 
             // btnRegistrasi
             // 
+            this.btnRegistrasi.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnRegistrasi.BackColor = System.Drawing.Color.DarkMagenta;
             this.btnRegistrasi.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrasi.ForeColor = System.Drawing.SystemColors.ButtonFace;
@@ -75,6 +78,7 @@
             // 
             // btnPeserta
             // 
+            this.btnPeserta.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnPeserta.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.btnPeserta.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPeserta.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -88,6 +92,7 @@
             // 
             // lblJudul
             // 
+            this.lblJudul.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblJudul.AutoSize = true;
             this.lblJudul.BackColor = System.Drawing.Color.Gray;
             this.lblJudul.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

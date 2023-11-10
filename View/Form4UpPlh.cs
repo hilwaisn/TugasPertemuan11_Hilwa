@@ -22,26 +22,15 @@ namespace TugasPertemuan11_Hilwa
         private void btnSave_Click(object sender, EventArgs e)
         {
             pltcontroller = new PelatihanController();
-            pltcontroller.tambahPelatihan(txtID.Text, txtNP.Text, txtDes.Text, dateTimePicker1.Value, dateTimePicker2.Value, txtIns.Text, txtLok.Text, txtHarga.Text);
+            pltcontroller.updatePelatihan(txtID.Text, txtNP.Text, txtDes.Text, dateTimePicker1.Value, dateTimePicker2.Value, txtIns.Text, txtLok.Text, txtHarga.Text);
             this.Controls.Clear();
             this.InitializeComponent();
-            txtNP.Focus();
+            txtID.Focus();
             MessageBox.Show("Data Disimpan");
-            Form4UpPlh lk = new Form4UpPlh();
+            Form2Pel lk = new Form2Pel();
 
             lk.Show();
             this.Hide();
-        }
-        
-
-        private void Form4UpPlh_Load(object sender, EventArgs e)
-        {
-            txtID.MaxLength = 3;
-            txtNP.MaxLength = 255;
-            txtDes.MaxLength = 255;
-            txtIns.MaxLength = 100;
-            txtLok.MaxLength = 255;
-            txtHarga.MaxLength = 10;
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
